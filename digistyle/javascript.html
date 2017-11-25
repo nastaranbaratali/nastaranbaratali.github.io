@@ -1,0 +1,83 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #newticker {
+            width: 600px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: gray;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        #newticker ul {
+            position: relative;
+        }
+        
+        #newticker ul li {
+            list-style-type: none;
+            position: absolute;
+            top: -100px;
+            left: 0px;
+            color: azure;
+            transition: .9s;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="newticker">
+        <ul>
+            <li>
+                <li class="news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt inventore sequi illo corrupti enim praesentium, .</li>
+
+                <li>
+                    <li class="news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt inventore sequi illo corrupti enim praesentium,</li>
+                    <li>
+                        <li class="news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt inventore sequi illo corrupti enim praesentium,</li>
+                        <li class="news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt inventore sequi illo corrupti enim praesentium,</li>
+
+                        <li class="news">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad sunt inventore sequi illo corrupti enim praesentium,</li>
+
+        </ul>
+
+    </div>
+    <script>
+        var myLi = document.getElementsByClassName("news");
+
+        var num = 0;
+        setInterval(function() {
+            for (var i = 0; i < 5; i++) {
+
+                myLi.item(i).style.top = "-100px";
+
+            }
+
+            myLi.item(num).style.top = "0px";
+
+            num++;
+
+            if (num > 4) {
+
+                num = 0;
+
+            }
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

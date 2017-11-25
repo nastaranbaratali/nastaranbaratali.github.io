@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 60em;
+    @include make-container();
+}
+
+.row {
+    @include make-row();
+}
+
+@font-face {
+    src: url("fonts/Iransans-web.woff") format("woff");
+    font-family: iran;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: iran;
+    text-align: right;
+    font-size: 14px;
+}
+
+.img {
+    width: 100%;
+}
+
+.navbar-brand:hover {
+    background-color: dimgray;
+}
+
+#brands {
+    width: 100px;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#brands img {
+    width: 80px;
+    height: auto;
+    margin-right: 30px;
+    border: 1px solid #ddd;
+    opacity: 0.4;
+}
+
+#brands img:hover {
+    box-shadow: 0 0 3px 2px #A6A6A6;
+    opacity: 1;
+}
+
+.remove_field {
+    padding: 10px;
+    border: 1px solid #000;
+    width: 50px;
+    height: 45px;
+}
+
+.app {
+    margin-left: ;
+}
+
+.nasiSearchBox {
+    position: relative;
+}
+
+.nasiSearchBox input {
+    width: 100%;
+}
+
+.nasiSearchBox .fa.fa-search {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+footer {
+    background-color: #424558;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    text-align: left;
+    color: #CCC;
+}
+
+footer p {
+    padding: 10.5px;
+    margin: 0px;
+    line-height: 100%;
+}
